@@ -198,13 +198,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\ThongKeController.cs" />
-    <Compile Include="Models\B2B\Classsupport.cs" />
-    <Compile Include="Models\B2B\ConfigAPIModel.cs" />
-    <Compile Include="Models\B2B\DoitacModel.cs" />
-    <Compile Include="Models\B2B\DSDangKyModel.cs" />
-    <Compile Include="Models\B2B\HopdongNCCModel.cs" />
-    <Compile Include="Models\B2B\SanPhamCanMuaAdd.cs" />
     <Compile Include="Controllers\CustomFilterRole.cs" />
     <Compile Include="Controllers\DonhangController.cs" />
     <Compile Include="Controllers\GiaoDienController.cs" />
@@ -213,7 +206,6 @@
     <Compile Include="Controllers\KhuyenMaiController.cs" />
     <Compile Include="Controllers\LoaiSPController.cs" />
     <Compile Include="Controllers\OauthController.cs" />
-    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
@@ -237,9 +229,6 @@
     <Compile Include="Models\AspNetUserLogin.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\B2B\DangkisanphamModel.cs" />
-    <Compile Include="Models\B2B\NhaCungCapModel.cs" />
-    <Compile Include="Models\B2B\SanphamcanmuaModel.cs" />
     <Compile Include="Models\BinhLuan.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
@@ -247,7 +236,6 @@
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ClassPartial\SanphamPartial.cs" />
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\ConfigAPI.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
@@ -321,7 +309,6 @@
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SanPhamModel.cs" />
-    <Compile Include="Models\Shipping.cs" />
     <Compile Include="Models\Thanhviennhom.cs" />
     <Compile Include="Models\ThongSoKyThuat.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
