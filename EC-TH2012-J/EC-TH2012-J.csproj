@@ -196,6 +196,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Trackingactionfilter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustomFilterRole.cs" />
@@ -1709,17 +1710,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
@@ -1830,7 +1826,6 @@
     <Content Include="Views\SanPham\ProductDetail.cshtml" />
     <Content Include="Views\Search\_SearchFormPartial.cshtml" />
     <Content Include="Views\Search\_CategoryListPartial.cshtml" />
-    <Content Include="Views\Shared\_LayoutWithSideBar.cshtml" />
     <Content Include="Views\Search\AdvancedSearchView.cshtml" />
     <Content Include="Views\Search\_AdvancedSearchPartial.cshtml" />
     <Content Include="Views\SideBar\ProductFilter.cshtml" />
@@ -2053,7 +2048,6 @@
     <Content Include="Views\Admin\SPDetail.cshtml" />
     <Content Include="Views\Admin\ThemThongSoKT.cshtml" />
     <Content Include="Views\Admin\SuaThongSoKT.cshtml" />
-    <Content Include="Views\Shared\_LayoutStock.cshtml" />
     <Content Include="Views\LoaiSP\Index.cshtml" />
     <Content Include="Views\LoaiSP\LoaiSPPartial.cshtml" />
     <Content Include="Views\LoaiSP\EditLoaiSP.cshtml" />
@@ -2071,12 +2065,10 @@
     <Content Include="Views\GiaoDien\General.cshtml" />
     <Content Include="Views\SanPham\ThongSoKyThuatPartial.cshtml" />
     <Content Include="Views\SanPham\_PartialSanPhamLienQuan.cshtml" />
-    <Content Include="Views\Shared\_LayoutB2B.cshtml" />
     <Content Include="Views\Account\Index.cshtml">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Account\UserList.cshtml" />
-    <Content Include="Views\Shared\AuthorizeFailed.cshtml" />
     <Content Include="Views\Roles\CreateRole.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Rolelist.cshtml" />
@@ -2096,6 +2088,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
@@ -2103,6 +2096,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="images\khuyenmai\" />
     <Folder Include="templatebackend\bower_components\bootstrap-tour\build\" />
   </ItemGroup>
