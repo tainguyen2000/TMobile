@@ -12,7 +12,7 @@ namespace EC_TH2012_J.Models
         public static string Token ="";
         public static string DoitacID;
         private List<SanPham> sanPhamMoiXem = new List<SanPham>();
-        public static ConfigAPI configAPI = null;
+        //public static ConfigAPI configAPI = null;
         public static string consumer_key;
         public static string reDirectUrl;
         public string userName { get; set; }
