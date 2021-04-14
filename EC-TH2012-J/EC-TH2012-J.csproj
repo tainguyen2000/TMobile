@@ -196,7 +196,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\Trackingactionfilter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustomFilterRole.cs" />
@@ -230,14 +229,8 @@
     <Compile Include="Models\AspNetUserLogin.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BinhLuan.cs">
-      <DependentUpon>ECModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\ChiTietDonHang.cs">
-      <DependentUpon>ECModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ConfigAPI.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DanhsachdangkisanphamNCC.cs">
@@ -275,9 +268,6 @@
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\HangSanXuatModel.cs" />
-    <Compile Include="Models\HopDongNCC.cs">
-      <DependentUpon>ECModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\KhuyenMai.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
@@ -291,9 +281,6 @@
     </Compile>
     <Compile Include="Models\MainMenuModel.cs" />
     <Compile Include="Models\ManagerObiect.cs" />
-    <Compile Include="Models\NhaCungCap.cs">
-      <DependentUpon>ECModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Oauth.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
@@ -710,6 +697,27 @@
     <Content Include="ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="ckeditor\skins\moono\readme.md" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="templatebackend\bower_components\bootstrap-tour\docs\assets\css\bootstrap-tour.css" />
     <Content Include="templatebackend\bower_components\bootstrap-tour\docs\assets\css\bootstrap-tour.min.css" />
     <Content Include="templatebackend\bower_components\bootstrap-tour\docs\assets\css\index.css" />
@@ -1721,7 +1729,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\login.cshtml" />
     <Content Include="Views\Shared\_LayoutFrontEnd.cshtml" />
     <Content Include="template\assets\css\fonts\fontawesome-webfont.eot" />
     <Content Include="template\assets\css\fonts\fontawesome-webfont.ttf" />
@@ -2069,9 +2076,6 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Account\UserList.cshtml" />
-    <Content Include="Views\Roles\CreateRole.cshtml" />
-    <Content Include="Views\Roles\Index.cshtml" />
-    <Content Include="Views\Roles\Rolelist.cshtml" />
     <Content Include="Views\Account\UserDetail.cshtml" />
     <Content Include="Views\GiaoDien\SlideShow.cshtml" />
     <Content Include="Views\GiaoDien\SlideShowSetting.cshtml" />
@@ -2082,23 +2086,22 @@
     <Content Include="Views\Donhang\DonHangPartial.cshtml" />
     <Content Include="Views\Donhang\DonHangDetail.cshtml" />
     <Content Include="Views\Account\ThongBao.cshtml" />
+    <Content Include="Views\SideBar\_LayoutWithSideBar.cshtml" />
+    <Content Include="Views\SideBar\_LayoutStock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="Areas\Admin\Views\web.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="images\khuyenmai\" />
     <Folder Include="templatebackend\bower_components\bootstrap-tour\build\" />
   </ItemGroup>

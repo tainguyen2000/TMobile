@@ -39,14 +39,6 @@
                     {
                         <span class="label label-danger">@item.AspNetRoles.First().Name</span>
                     }
-                    else if (@item.AspNetRoles.First().Name.Equals("Nhân viên"))
-                    {
-                        <span class="label label-info">@item.AspNetRoles.First().Name</span>
-                    }
-                    else if (@item.AspNetRoles.First().Name.Equals("Nhà cung cấp"))
-                    {
-                        <span class="label label-warning">@item.AspNetRoles.First().Name</span>
-                    }
                     else
                     {
                         <span class="label" style="background-color:#808080; text-decoration:line-through">@item.AspNetRoles.First().Name</span>

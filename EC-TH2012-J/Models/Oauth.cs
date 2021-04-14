@@ -23,7 +23,5 @@ namespace EC_TH2012_J.Models
         public string MaNCC { get; set; }
         public string Token { get; set; }
         public Nullable<System.DateTime> ExpiresTime { get; set; }
-    
-        public virtual NhaCungCap NhaCungCap { get; set; }
     }
 }

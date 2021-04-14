@@ -220,15 +220,15 @@ namespace EC_TH2012_J.Models
             return db.ChiTietDonHangs.Where(m => m.MaDH.Contains(maDH));
         }
 
-        internal IQueryable<object> ThongKeDoanhThu(DateTime? froms, DateTime? tos)
-        {           
-            Entities db = new Entities();
-            var s = from p in db.DonHangKHs
-                    where p.TinhTrangDH == 3 && p.NgayDatMua >= froms && p.NgayDatMua <= tos
-                    group p by EntityFunctions.TruncateTime(p.NgayDatMua) into gro
-                    select new { ngaymua = gro.Key.Value, tongtien = gro.Sum(r => r.Tongtien) };
-            return s;
-        }
+        //internal IQueryable<object> ThongKeDoanhThu(DateTime? froms, DateTime? tos)
+        //{           
+        //    Entities db = new Entities();
+        //    var s = from p in db.DonHangKHs
+        //            where p.TinhTrangDH == 3 && p.NgayDatMua >= froms && p.NgayDatMua <= tos
+        //            group p by EntityFunctions.TruncateTime(p.NgayDatMua) into gro
+        //            select new { ngaymua = gro.Key.Value, tongtien = gro.Sum(r => r.Tongtien) };
+        //    return s;
+        //}
 
 
         internal IQueryable<object> ThongKeTiTrong(DateTime? froms, DateTime? tos)

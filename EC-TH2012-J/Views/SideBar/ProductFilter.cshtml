@@ -1,27 +1,9 @@
 ﻿<script>
-    //$(document).ready(function () {
-    //    $(document).on("click", "#nav_grid a[href]", function () {
-    //        $.ajax({
-    //            url: $(this).attr("href"),
-    //            type: 'GET',
-    //            cache: false,
-    //            success: function (result) {
-    //                $('#grid-view').html(result);
-    //                $('html, body').animate({
-    //                    scrollTop: $("#grid-view").offset().top
-    //                }, 500);
-    //            }
-    //        });
-    //        return false;
-    //    });
-    //});
-
     function summitfilter()
     {
         var form = document.getElementById("productfilterfrm");
         form.submit();
     }
-
 </script>
 
 <!-- ========================================= PRODUCT FILTER ========================================= -->
@@ -61,7 +43,6 @@
                 <h2>Giá</h2>
                 <hr>
                 <div class="price-range-holder">
-                    @*<input type="text" class="price-slider" value="">*@
                     <h5>Từ</h5>
                     <input class="le-input" type="number" name="minprice" step="500000" />
                     <h5>Đến</h5>

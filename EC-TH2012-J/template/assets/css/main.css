@@ -3133,9 +3133,9 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 #single-product .product-item-holder {
   border: none;
 }
-#single-product .product-item-holder .owl-wrapper-outer {
+/*#single-product .product-item-holder .owl-wrapper-outer {
   border: 1px solid #e0e0e0;
-}
+}*/
 #single-product .gallery-thumbs {
   margin: 10px 0 0 0;
 }

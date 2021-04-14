@@ -17,14 +17,14 @@ namespace EC_TH2012_J.Controllers
 {
     public class AdminController : Controller
     {
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         // GET: Admin
         public ActionResult Index()
         {
             return View();
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public ActionResult SanPham()
         {
             SanPhamModel spm = new SanPhamModel();
@@ -33,7 +33,7 @@ namespace EC_TH2012_J.Controllers
             return View();
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public ActionResult EditSP(string id)
         {
             if (id == null)
@@ -51,7 +51,7 @@ namespace EC_TH2012_J.Controllers
             return View(sp);
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditSP([Bind(Include = "MaSP,TenSP,LoaiSP,HangSX,XuatXu,GiaGoc,MoTa,SoLuong,isnew,ishot")] SanPham sanpham, HttpPostedFileBase ad, HttpPostedFileBase an, HttpPostedFileBase ak)
@@ -85,7 +85,7 @@ namespace EC_TH2012_J.Controllers
             return TimSP(null,null,null);
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public bool UploadAnh(HttpPostedFileBase file,string tenfile)
         {
             // Verify that the user selected a file
@@ -106,7 +106,7 @@ namespace EC_TH2012_J.Controllers
             return false;
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult ThemSP([Bind(Include = "TenSP,LoaiSP,HangSX,XuatXu,GiaGoc,MoTa,SoLuong,isnew,ishot")] SanPham sanpham, HttpPostedFileBase ad, HttpPostedFileBase an, HttpPostedFileBase ak)
@@ -129,7 +129,7 @@ namespace EC_TH2012_J.Controllers
             return View("SanPham",sanpham);
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public ActionResult SPDetail(string id)
         {
             SanPhamModel sp = new SanPhamModel();
@@ -155,7 +155,7 @@ namespace EC_TH2012_J.Controllers
             return TimSP(null,null,null);
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         [HttpPost]
         public ActionResult ThemThongSoKT(List<ThongSoKyThuat> lstkt) 
         {
@@ -172,7 +172,7 @@ namespace EC_TH2012_J.Controllers
             return RedirectToAction("SanPham"); 
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         [HttpPost]
         public ActionResult SuaThongSoKT(List<ThongSoKyThuat> lstkt)
         {
@@ -190,7 +190,7 @@ namespace EC_TH2012_J.Controllers
             return RedirectToAction("SanPham");
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public ActionResult SuaThongSoKT(string masp)
         {
             SanPhamModel spm = new SanPhamModel();
@@ -205,7 +205,7 @@ namespace EC_TH2012_J.Controllers
             return View("SuaThongSoKT",spm.GetTSKT(masp).ToList());
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public ActionResult TimSP(string key,string maloai,int? page)
         {
             SanPhamModel spm = new SanPhamModel();
@@ -214,7 +214,7 @@ namespace EC_TH2012_J.Controllers
             return PhanTrangSP(spm.AdvancedSearch(key, maloai, null, null, null),page,null);
         }
 
-        [AuthLog(Roles = "Quản trị viên,Nhân viên")]
+        [AuthLog(Roles = "Quản trị viên")]
         public ActionResult PhanTrangSP(IQueryable<SanPham> lst,int? page, int? pagesize)
         {
             int pageSize = (pagesize ?? 10);
