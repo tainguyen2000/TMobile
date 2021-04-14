@@ -11,7 +11,6 @@ namespace EC_TH2012_J.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Web.Mvc;
     
     public partial class Sanphamcanmua
     {
@@ -26,8 +25,6 @@ namespace EC_TH2012_J.Models
         public Nullable<int> Soluong { get; set; }
         public Nullable<System.DateTime> Ngayketthuc { get; set; }
         public Nullable<System.DateTime> Ngaydang { get; set; }
-
-        [AllowHtml]
         public string Mota { get; set; }
     
         public virtual SanPham SanPham { get; set; }

@@ -11,14 +11,11 @@ namespace EC_TH2012_J.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.Web.Mvc;
     
     public partial class SanPhamKhuyenMai
     {
         public string MaKM { get; set; }
         public string MaSP { get; set; }
-
-        [AllowHtml]
         public string MoTa { get; set; }
         public Nullable<int> GiamGia { get; set; }
     

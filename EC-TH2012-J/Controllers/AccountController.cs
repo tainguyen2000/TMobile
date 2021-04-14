@@ -131,13 +131,12 @@ namespace EC_TH2012_J.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = model.UserName, PhoneNumber = model.DienThoai, Email = model.Email, DiaChi = model.DiaChi, HoTen = model.HoTen, Avatar = "noavatar.jpg" };
+                var user = new ApplicationUser() { UserName = model.UserName, PhoneNumber = model.DienThoai, Email = model.Email, DiaChi = model.DiaChi, HoTen = model.HoTen};
 
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    UserManager.AddToRole(user.Id, "Khách hàng");
-                    //UserManager.AddToRole(user.Id, "Nhà cung cấp");
+                    UserManager.AddToRole(user.Id, "Khách hàng");               
                     await SignInAsync(user, isPersistent: false);
                     ManagerObiect.getIntance().userName = model.UserName;
                     SendMailConfirm(user.Id);
@@ -517,7 +516,7 @@ namespace EC_TH2012_J.Controllers
             {
                 UserModel user = new UserModel();
                 user.UpdateInfo(info, User.Identity.GetUserId());
-                info.Avatar = user.FindById(User.Identity.GetUserId()).Avatar;
+                //info.Avatar = user.FindById(User.Identity.GetUserId()).Avatar;
                 ViewBag.StatusMessage = "Cập nhật thông tin thành công";
             }
             return View(info);

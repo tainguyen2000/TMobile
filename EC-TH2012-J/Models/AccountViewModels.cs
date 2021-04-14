@@ -229,7 +229,7 @@ namespace EC_TH2012_J.Models
             NgaySinh = u.NgaySinh;
             GioiTinh = u.GioiTinh;
             DiaChi = u.DiaChi;
-            Avatar = u.Avatar;
+            //Avatar = u.Avatar;
         }
 
     }
