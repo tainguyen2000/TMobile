@@ -39,7 +39,7 @@ namespace EC_TH2012_J.Models
             user = db.AspNetUsers.Find(p);
             if (user != null)
             {
-                user.Avatar = p + ".jpg";
+                //user.Avatar = p + ".jpg";
                 db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
             }

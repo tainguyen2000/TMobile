@@ -21,7 +21,7 @@ namespace EC_TH2012_J.Models
         public Nullable<System.DateTime> NgaySinh { get; set; }
         public Nullable<bool> GioiTinh { get; set; }
         public string DiaChi { get; set; }
-        public string Avatar { get; set; }
+        //public string Avatar { get; set; }
         public string CMND { get; set; }
     }
 

@@ -236,7 +236,6 @@
     <Compile Include="Models\ChiTietDonHang.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\ConfigAPI.cs">
       <DependentUpon>ECModel.tt</DependentUpon>
     </Compile>
@@ -322,10 +321,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EC-TH2012-J-Data.mdf" />
-    <Content Include="App_Data\EC-TH2012-J-Data_log.ldf">
-      <DependentUpon>EC-TH2012-J-Data.mdf</DependentUpon>
-    </Content>
     <Content Include="ckeditor\adapters\jquery.js" />
     <Content Include="ckeditor\build-config.js" />
     <Content Include="ckeditor\ckeditor.js" />
@@ -618,23 +613,6 @@
     <Content Include="ckeditor\skins\moono\images\refresh.png" />
     <Content Include="ckeditor\skins\moono\images\spinner.gif" />
     <Content Include="ckeditor\styles.js" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\bootstrap-rtl.css" />
-    <Content Include="Content\css\bootstrap-rtl.min.css" />
-    <Content Include="Content\css\bootstrap.css" />
-    <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\font-awesome.css" />
-    <Content Include="Content\css\font-awesome.min.css" />
-    <Content Include="Content\css\morris.css" />
-    <Content Include="Content\css\sb-admin-rtl.css" />
-    <Content Include="Content\css\sb-admin.css" />
-    <Content Include="Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\PagedList.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Content\style.css" />
     <Content Include="Datetimepicker\jquery-ui.css" />
     <Content Include="Datetimepicker\jquery-ui.js" />
     <Content Include="favicon.ico" />
@@ -704,8 +682,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
     <EntityDeploy Include="Models\ECModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ECModel.Designer.cs</LastGenOutput>
@@ -723,10 +699,6 @@
       <DependentUpon>ECModel.edmx</DependentUpon>
       <LastGenOutput>ECModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\FontAwesome.otf" />
     <Content Include="ckeditor\CHANGES.md" />
     <Content Include="ckeditor\LICENSE.md" />
     <Content Include="ckeditor\plugins\scayt\LICENSE.md" />
@@ -1771,6 +1743,7 @@
     <Content Include="template\single-product.html" />
     <Content Include="template\switchstylesheet\switchstylesheet.js" />
     <Content Include="template\terms.html" />
+    <Content Include="Views\GiaoDien\Header.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1779,7 +1752,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -1796,8 +1768,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\_LoginPartial.cshtml" />
-    <Content Include="Views\_ViewStart - Copy.cshtml" />
-    <Content Include="Views\Xacthuc\authenticate.cshtml" />
     <Content Include="Views\Home\login.cshtml" />
     <Content Include="Views\Shared\_LayoutFrontEnd.cshtml" />
     <Content Include="template\assets\css\fonts\fontawesome-webfont.eot" />
@@ -2141,7 +2111,6 @@
     <Content Include="Views\KhuyenMai\DSSanPhamKhuyenMai.cshtml" />
     <Content Include="Views\KhuyenMai\DSSanPham.cshtml" />
     <Content Include="Views\Home\_MiniBannerPartial.cshtml" />
-    <Content Include="Views\GiaoDien\Header.cshtml" />
     <Content Include="Views\GiaoDien\General.cshtml" />
     <Content Include="Views\SanPham\ThongSoKyThuatPartial.cshtml" />
     <Content Include="Views\SanPham\_PartialSanPhamLienQuan.cshtml" />
@@ -2176,6 +2145,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="images\khuyenmai\" />
     <Folder Include="templatebackend\bower_components\bootstrap-tour\build\" />
   </ItemGroup>
