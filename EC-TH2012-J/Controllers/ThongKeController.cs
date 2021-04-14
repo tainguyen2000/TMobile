@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using EC_TH2012_J.Models.B2B;
+//using EC_TH2012_J.Models.B2B;
 using EC_TH2012_J.Models;
 
 namespace EC_TH2012_J.Controllers
