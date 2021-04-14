@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EC_TH2012_J.Models
-{
-    using System;
-    using System.Collections.Generic;
+//namespace EC_TH2012_J.Models
+//{
+//    using System;
+//    using System.Collections.Generic;
     
-    public partial class HopDongNCC
-    {
-        public string MaHD { get; set; }
-        public string MaNCC { get; set; }
-        public Nullable<System.DateTime> NgayKy { get; set; }
-        public Nullable<int> ThoiHanHD { get; set; }
-        public Nullable<System.DateTime> TGGiaoHang { get; set; }
-        public string MaSP { get; set; }
-        public Nullable<int> SLToiThieu { get; set; }
-        public Nullable<int> SLCungCap { get; set; }
-        public Nullable<System.DateTime> Dateaccept { get; set; }
-        public Nullable<bool> IsBuy { get; set; }
-        public Nullable<int> SoNgayGiao { get; set; }
-        public Nullable<decimal> DonGia { get; set; }
-        public Nullable<bool> TinhTrang { get; set; }
-        public Nullable<bool> TTThanhToan { get; set; }
+//    public partial class HopDongNCC
+//    {
+//        public string MaHD { get; set; }
+//        public string MaNCC { get; set; }
+//        public Nullable<System.DateTime> NgayKy { get; set; }
+//        public Nullable<int> ThoiHanHD { get; set; }
+//        public Nullable<System.DateTime> TGGiaoHang { get; set; }
+//        public string MaSP { get; set; }
+//        public Nullable<int> SLToiThieu { get; set; }
+//        public Nullable<int> SLCungCap { get; set; }
+//        public Nullable<System.DateTime> Dateaccept { get; set; }
+//        public Nullable<bool> IsBuy { get; set; }
+//        public Nullable<int> SoNgayGiao { get; set; }
+//        public Nullable<decimal> DonGia { get; set; }
+//        public Nullable<bool> TinhTrang { get; set; }
+//        public Nullable<bool> TTThanhToan { get; set; }
     
-        public virtual SanPham SanPham { get; set; }
-        public virtual NhaCungCap NhaCungCap { get; set; }
-    }
-}
+//        public virtual SanPham SanPham { get; set; }
+//        public virtual NhaCungCap NhaCungCap { get; set; }
+//    }
+//}

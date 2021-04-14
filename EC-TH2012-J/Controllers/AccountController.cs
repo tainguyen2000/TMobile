@@ -515,8 +515,7 @@ namespace EC_TH2012_J.Controllers
             if (ModelState.IsValid)
             {
                 UserModel user = new UserModel();
-                user.UpdateInfo(info, User.Identity.GetUserId());
-                //info.Avatar = user.FindById(User.Identity.GetUserId()).Avatar;
+                user.UpdateInfo(info, User.Identity.GetUserId());               
                 ViewBag.StatusMessage = "Cập nhật thông tin thành công";
             }
             return View(info);
