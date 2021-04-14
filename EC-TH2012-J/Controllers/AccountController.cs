@@ -9,7 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using EC_TH2012_J.Models;
-using EC_TH2012_J.Models.B2B;
+//using EC_TH2012_J.Models.B2B;
 using System.IO;
 using PagedList;
 using PagedList.Mvc;
@@ -92,34 +92,34 @@ namespace EC_TH2012_J.Controllers
             return View();
         }
 
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> RegisterB2B(Register2B2ViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email, Avatar = "noavatar.jpg" };
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        //public async Task<ActionResult> RegisterB2B(Register2B2ViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = new ApplicationUser() { UserName = model.UserName, Email = model.Email, Avatar = "noavatar.jpg" };
 
-                var result = await UserManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
-                {
-                    UserManager.AddToRole(user.Id, "Nhà cung cấp");
-                    NhaCungCapModel ncc = new NhaCungCapModel();
-                    ncc.ThemNCC(model, user.Id);
-                    await SignInAsync(user, isPersistent: false);
-                    ManagerObiect.getIntance().userName = model.UserName;
-                    return RedirectToLocal("/Auction/index");
-                }
-                else
-                {
-                    AddErrors(result);
-                }
-            }
+        //        var result = await UserManager.CreateAsync(user, model.Password);
+        //        if (result.Succeeded)
+        //        {
+        //            UserManager.AddToRole(user.Id, "Nhà cung cấp");
+        //            NhaCungCapModel ncc = new NhaCungCapModel();
+        //            ncc.ThemNCC(model, user.Id);
+        //            await SignInAsync(user, isPersistent: false);
+        //            ManagerObiect.getIntance().userName = model.UserName;
+        //            return RedirectToLocal("/Auction/index");
+        //        }
+        //        else
+        //        {
+        //            AddErrors(result);
+        //        }
+        //    }
 
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
+        //    // If we got this far, something failed, redisplay form
+        //    return View(model);
+        //}
 
 
         //
@@ -489,25 +489,25 @@ namespace EC_TH2012_J.Controllers
             return View(info);
         }
 
-        public ActionResult EditNCCInfo()
-        {
-            NhaCungCapModel ncc = new NhaCungCapModel();
-            EditInfo2B2ViewModel info = new EditInfo2B2ViewModel(ncc.FindByNetUser(User.Identity.GetUserId()));
-            return View(info);
-        }
+        //public ActionResult EditNCCInfo()
+        //{
+        //    NhaCungCapModel ncc = new NhaCungCapModel();
+        //    EditInfo2B2ViewModel info = new EditInfo2B2ViewModel(ncc.FindByNetUser(User.Identity.GetUserId()));
+        //    return View(info);
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult EditNCCInfo([Bind(Include = "MaNCC,TenNCC,DiaChi,SDT_NCC,Email")] EditInfo2B2ViewModel info)
-        {
-            if (ModelState.IsValid)
-            {
-                NhaCungCapModel ncc = new NhaCungCapModel();
-                ncc.UpdateInfo(info);
-                ViewBag.StatusMessage = "Cập nhật thông tin thành công";
-            }
-            return View(info);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult EditNCCInfo([Bind(Include = "MaNCC,TenNCC,DiaChi,SDT_NCC,Email")] EditInfo2B2ViewModel info)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        NhaCungCapModel ncc = new NhaCungCapModel();
+        //        ncc.UpdateInfo(info);
+        //        ViewBag.StatusMessage = "Cập nhật thông tin thành công";
+        //    }
+        //    return View(info);
+        //}
 
         [HttpPost]
         [ValidateAntiForgeryToken]
